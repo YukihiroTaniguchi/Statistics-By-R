@@ -89,3 +89,4 @@ before_program <- c(61, 50, 41, 55, 51, 48, 46, 55, 65, 70)
 after_program <- c(59, 48, 33, 54, 47, 52, 38, 50, 64, 63)
 
 t.test(before_program, after_program, paired=TRUE)
+
