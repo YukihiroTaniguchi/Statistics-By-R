@@ -174,3 +174,35 @@ A2条件 <- rep(c("斉藤", "和田", "寺原", "杉内", "新垣"), 3)
 数字ID2 <- factor(c(rep(1:5, 3), rep(6:10, 3)))
 
 summary(aov(味~温度*銘柄+Error(人2:温度+人2:温度:銘柄)))
+
+summary(aov(味~温度*銘柄+Error(人2:温度+人2:温度:銘柄)))
+
+
+# 練習問題 --------------------------------------------------------------------
+
+(1)
+low <- c(75, 61, 68, 58, 66, 55, 65, 63)
+lit <- c(62, 60, 66, 63, 55, 53, 59, 63)
+sci <- c(65, 60, 78, 52, 59, 66, 73, 64)
+eng <- c(52, 59, 44, 67, 47, 53, 58, 49)
+
+test <- c(low, lit, sci, eng)
+department <- factor(c(rep('low', 8), rep('lit', 8), rep('sci', 8), rep('eng', 8)))
+
+summary(aov(test~department))
+TukeyHSD(aov(test~department))
+
+(2)
+lec <- c(51, 66, 70, 75, 73, 62, 55)
+pra <- c(47, 54, 55, 39, 60, 62, 56)
+tra <- c(55, 37, 47, 60, 62, 53, 50)
+
+test2 <- c(lec, pra, tra)
+student <- factor(rep(c("森本", "田中", "稲葉", "瀬木", "高橋", "工藤", "金子"), 3))
+lesson <- factor(c(rep("講義", 7), rep("問題", 7), rep("実習", 7)))
+
+summary(aov(test2~lesson+student))
+TukeyHSD(aov(test2~lesson+student))
+
+
+
