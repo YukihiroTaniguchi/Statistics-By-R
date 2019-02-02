@@ -153,3 +153,4 @@ lesson <- factor(c(rep("講義", 7), rep("問題", 7), rep("実習", 7)))
 summary(aov(test2~lesson+student))
 
 TukeyHSD(aov(test2~lesson+student))
+
