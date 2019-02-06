@@ -27,4 +27,22 @@ print(sqrt(varp(x)))
 print(sqrt(varp(y)))
 
 # (1.2)
+差得点 <- x - y
+par(mfrow=c(1, 1))
+hist(差得点)
+mean(差得点)
+median(差得点)
+varp(差得点)
+sqrt(varp(差得点))
+
+# (1.3)
+cor(x, y)
+
+# (1.4)
+
+単回帰結果 <- lm(y~x)
+summary(単回帰結果)
+
+plot(x, y)
+abline(単回帰結果)
 
