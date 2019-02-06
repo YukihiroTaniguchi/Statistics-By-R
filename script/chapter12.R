@@ -24,3 +24,5 @@ pbinom(16, 20, 0.5) + pbinom(16, 20, 0.5, lower.tail=FALSE)
 
 的中回数 <- 0:10
 round(pbinom(的中回数, 10, 1/3), 4)
+
+pbinom(6, 10, 1/3)
