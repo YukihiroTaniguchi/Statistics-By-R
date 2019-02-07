@@ -23,3 +23,4 @@ expsy4 <- cbind(expsy3, 尺度得点)
 print(expsy4)
 
 cronbach(expsy4[, 1:10])
+
