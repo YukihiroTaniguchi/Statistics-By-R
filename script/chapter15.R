@@ -13,7 +13,7 @@ lm(daughter~father+mother)
 重回帰結果 <- lm(daughter~father+mother)
 summary(重回帰結果)
 
-coef(重回帰結果)[2:3] * (sd(重回帰データ[, 2:3]) / sd(重回帰データ[,1]))
+coef(重回帰結果)[2:3] * sd(重回帰データ[, 2:3]) / sd(重回帰データ[,1])
 
 単回帰結果 <- update(重回帰結果, .~. -mother)
 
